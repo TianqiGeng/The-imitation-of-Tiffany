@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* CSS Document */
+body, div, dl, dt, dd, ul, ol, nl, li, h1, h2, h3, h4, h5, h6, p, span, a, b, strong, object, iframe, label, img, select, form, input, textarea, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {margin:0;padding:0}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+table {border-collapse:collapse;border-spacing:0}
+a {text-decoration:none} 
+a:hover {text-decoration:underline}
+ul, ol {list-style:none outside none} 
+fieldset, img {border:0 none}
+textarea {resize:none}
+input:focus, select:focus, textarea:focus {outline:0 none}
+
+a:link{
+	
+	text-decoration:none;}
+a:visited{
+	color:#000;}
+a:hover{
+	color:#81D8CF;
+	}
+
+
+
+	
+	
+ul li ul li{
+	float:none;	
+	}
+ul li div {
+	display:inline;}
+#logo ul{
+	margin-top:15px;
+	}
+
+
+.blue ul li {
+	color:#81D8CF;
+	}
+
+	
+#top{
+	width:1200px;
+	height:150px;
+	margin:0 auto;	
+	}
+#dfn{
+	width:1200px;
+	height:10px;
+	background-color:#81D8CF;
+	position:fixed;
+	}
+#logo
+{
+	
+	height:80px;
+	
+	
+	}
+#logo img{
+	margin:0 auto;
+	padding-left:400px;
+	height:70px;
+	}
+#menu{
+	width:1200px;
+	height:30px;
+	margin:0 auto;	
+	border-bottom:black solid 1px;
+	
+	}
+#menu ul{
+	list-style:none;
+	padding-left:80px;}
+#menu ul li{
+	float:left;
+	padding-left:40px;
+	font-family:Verdana, Geneva, sans-serif;
+	color:black;
+	
+	}
+#main{
+	width:1200px;
+	height:2000px;
+	margin:0 auto;
+	
+	
+}
+#picbox{
+	height:550px;
+	margin-buttom:20px;
+	
+	}
+pic img{
+	height:200px;
+	
+	}
+#story{
+	width:1200px;
+	height:491px;
+	
+	}
+#two{
+	width:1200px;
+	height:491px;
+	
+	}
+#twoleft{
+	float:left;	
+	
+	width:690px;
+	height:491px;
+	margin-left:20px;
+	}
+#tworight{
+	float:right;	
+	margin-right:25px;
+	width:440px;
+	height:491px;
+	
+	}	
+#show{
+	width:1200px;
+	height:480px;
+	margin-top:10px;
+	
+	
+	
+	}
+#meizuan{
+	width:1200px;
+	height:180px;
+	font-size:30px;
+	
+	line-height:150px;
+	
+	
+	
+	
+	}
+#showmeizuan{
+	width:1200px;
+	height:240px;
+	
+	}
+
+#showmeizuan ul{
+	list-style:none;
+	}
+#showmeizuan ul li{
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	color:black;
+	height:220px;
+	width:230px;
+	margin-left:5px;
+	
+		}
+
+#foot{
+	width:1200px;
+	height:200px;
+	margin-top:10px;
+	margin-left:80px;
+	
+	
+	}
+#dfn2{
+	width:1200px;
+	height:10px;
+	background-color:#81D8CF;
+	}
+#juti ul{
+	list-style:none;
+	}
+#juti ul li{
+	float:left;
+	font-family:Verdana, Geneva, sans-serif;
+	color:black;
+	height:40px;
+	width:235px;
+	margin-left:5px;
+	
+		}
+#juti ul li hr{
+	width:239px;}

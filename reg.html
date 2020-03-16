@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册</title>
+<script language="JavaScript" src="js/mydate.js"></script>
+<link type="text/css" rel="stylesheet" href="style/first.css"/>
+<style type="text/css">
+regg div{
+	
+	display:inline;
+	width:60px
+	}
+</style>
+<script type="text/javascript">
+		function toRed(o){
+			o.style.borderColor="#ff0000";
+			}
+		function toGrey(o){
+			o.style.borderColor="#cccccc";
+			}
+		function checkForm(){
+			if(checkUserName()&&checkUserdName()&&checkUserPass()&&checkEmail()){
+				return true;
+			}		
+			return false;
+			}
+		function checkUserName(){
+			var userName = document.form.userName;
+			var userNameError = document.getElementById("userNameError");
+			userNameError.innerHTML = "";
+			if(userName.value==""||userName.value=="请输入用户名"){
+			
+			userNameError.innerHTML = "<span style=\"color:#ff0000;\">用户名不能为空！</span>";
+			return false;
+		}
+		var reg=/[^0-9]$/;
+		if(!userName.value.match(reg)){
+			userNameError.innerHTML = "<span style=\"color:#ff0000;\">用户名不能出现数字</span>";
+			return false;
+			}
+		return true;
+	}
+		function checkUserdName(){
+			var userdName = document.form.userName;
+			var userNamedError = document.getElementById("userdNameError");
+			userNamedError.innerHTML = "";
+			if(userdName.value==""||userdName.value=="请输入用户名"){
+			
+			userdNameError.innerHTML = "<span style=\"color:#ff0000;\">姓氏不能为空！</span>";
+			return false;
+		}
+			return true;}
+		function checkUserPass(){
+		var userPass = document.form.userPass;	
+		var rePass = document.form.rePass;
+		var userPassError = document.getElementById("userPassError");
+		var rePassError = document.getElementById("rePassError");
+		userPassError.innerHTML = "";
+		rePassError.innerHTML = "";
+		if(userPass.value==""||userPass.value=="请输入密码（6-12位）"){
+			userPassError.innerHTML = "<span style=\"color:#ff0000;\">密码不能为空！</span>";
+			return false;
+		}
+		if(userPass.value.length<6||userPass.value.length>12){
+			userPassError.innerHTML = "<span style=\"color:#ff0000;\">密码长度应为6-12位！</span>";
+			return false;
+		}
+		if(userPass.value!=rePass.value){
+			
+			rePassError.innerHTML = "<span style=\"color:#ff0000;\">两次输入的密码不相同！</span>";
+			return false;
+		}
+		return true;
+	}		
+		function checkEmail(){
+			var email = document.form.email;
+			var emailError = document.getElementById("emailError");
+			emailError.innerHTML = "";
+			if(email.value==""){
+				emailError.innerHTML = "<span style=\"color:#ff0000;\">Email不能为空！</span>";
+				return false;
+		}	
+			var reg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+			if(!email.value.match(reg)){
+			emailError.innerHTML = "<span style=\"color:#ff0000;\">Email格式非法！</span>";
+			email.select();
+			return false;
+		}
+			return true;
+	}
+	function time(){
+		var now=new Date();
+		var year=now.getFullYear();
+		var month=now.getMonth()+1;
+		var date=now.getDate();
+		var hour=now.getHours();
+		var minute=now.getMinutes();
+		var second=now.getSeconds();
+		var day=now.getDay();
+		if(hour>12){
+			hour=hour-12;
+			}
+		switch(day){
+			case 1:
+			 	day="星期一";
+				break;
+			case 2:
+			 	day="星期二";
+				break;
+			case 3:
+			 	day="星期三";
+				break;
+			case 4:
+			 	day="星期四";
+				break;
+			case 5:
+			 	day="星期五";
+				break;
+			case 6:
+			 	day="星期六";
+				break;
+			default:
+				day="星期日";
+			}
+			
+				
+			var time="现在时间是："+year+"年"+month+"月"+date+"日"+hour+
+						":"+minute+":"+second+"&nbsp;"+"今天是"+day;
+						
+			
+		document.getElementById("s").innerHTML=time;
+			
+			//window.setTimeout("time()",1000);
+			window.setInterval("time()","1000");}
+</script>
+
+</head>
+
+<body onload="time()">
+<div id="ddd">
+<div id="top">
+	<div id="dfn"></div>
+		<a name="top"/>
+    	<div id="logo" class="blue">
+        <ul style="padding:0px;list-style:none;line-height:20px;float:left;">
+         <li><a href="" style=";font-size:18px;color:#CCC;">
+        
+         专卖店</a></li>
+		 <li><a href="" style="font-size:18px;color:#CCC;";>LANGAGE</a></li>
+		</ul>
+         <a href="first.html" ><img src="images/logo.png"  float="left" style="width:180px height:80px;">
+         </a>
+         <ul style="padding:0px;list-style:none;line-height:20px;float:right;">
+         <li><a href="" style="font-size:18px;color:#CCC;">登录或创建账户</a></li>
+		 <li><a href="" style="margin-left:70px;font-size:18px;color:#CCC;">购物单</a></li>
+		</ul>
+         </div>
+        
+    	<div id="menu">
+    	
+   		 <ul>
+    		<li><a href="">订婚</a>
+           
+            </li>
+        	<li><a href="">珠宝</a></li>
+        	<li><a href="">经典款式</a></li>
+        	<li><a href="">腕表</a></li>
+        	<li><a href="">配饰</a></li>
+        	<li><a href="">礼品</a></li>
+        	<li><a href="">BLUE BOOK</a></li>
+        	<li><a href="" style="margin-right:100px;">蒂凡尼的世界</a></li>   
+    	</ul>
+   
+    	
+	
+						
+				<div id="searchrr"  >
+                    <a href="#" class="cleartext"></a>					
+                    <input id="searchInput"  autocomplete="off"  style="padding-bottom:2px;border:black solid 1px;" name="search" type="text" placeholder="搜索" >
+                    <img src="images/sousuo.png"  width="18" height="18" alt="Search" />
+           
+				</div>
+                         
+		</div>
+        
+    </div>
+    <div id="s" style="padding-left:77px;padding-top:-30px;">   </div>
+</div>
+<div id="reg" style="width:1200px;height:1100px;margin:0 auto;border:#81D8CF solid 1px;">
+<p style="padding-left:520px;font-size:28px;margin:8px;">创建账户
+	<span style="padding-left:450px;font-size:15px">有账号|<a href="log.html" >登录</a></span>
+</p>
+		
+<hr style="margin-top:-9px;"/>
+	<div id="regg" style="width:400px;height:700px;margin:0 auto;margin-top:30px;">
+    	<span>您可将项目保存到您的蒂芙尼账户。</span>
+    <form action="first.html" name="form" onsubmit="return checkForm()" method="post" style="margin-top:20px;">
+    
+        			
+                 	姓氏<br/>
+                	
+                      <input type="text" name="userdName" class="text" onmouseover="toRed(this)" onmouseout="toGrey(this)" onblur="checkUserdName()" style="font-size:28px;"/>
+    					<div id="userdNameError"><span style="color:#ff0000">*</span></div>   <br/><br/>     
+                
+                 	名字<br/>
+                	
+                      <input type="text" name="userName" class="text" onmouseover="toRed(this)" onmouseout="toGrey(this)" onblur="checkUserName()" style="font-size:28px;"/>
+    					<div id="userNameError"><span style="color:#ff0000">*</span></div> <br/><br/>           
+               		密码<br/>
+                    	<input type="password" name="userPass" class="text" onmouseover="toRed(this)" onmouseout="toGrey(this)" onblur="checkUserPass()" style="font-size:28px;"/>
+    					<div id="userPassError"><span style="color:#ff0000">*</span></div> 
+                        <br/><br/>  
+                    确定密码
+                    <br/>
+                    	<input type="password" name="rePass" class="text" onmouseover="toRed(this)" onmouseout="toGrey(this)" onblur="checkUserPass()" style="font-size:28px;"/>
+                        <div id="rePassError"><span style="color:#ff0000">*</span></div>
+                        <br/><br/> 
+                   
+                        
+                 	邮箱<br/>
+                	
+                      <input type="text" name="email" class="text" onmouseover="toRed(this)" onmouseout="toGrey(this)" onblur="checkEmail()" style="font-size:28px;"/>
+                        <div id="emailError"><span style="color:#ff0000">*</span></div>
+                         <br/><br/>        
+                
+                 	性别&nbsp;&nbsp; (可选)<br/>
+                		<input type="radio" name="gender" id="gender-1" value="男"  checked="checked"/>
+                        <label for="gender-1">男</label>
+    					<input type="radio" name="gender" id="gender-2" value="女"  />
+                        <label for="gender-2">女</label>    
+                      
+                         <br/> <br/>  
+                    生日<br/>
+                    	<input type="text" name="starttime" style="color:#CCC;padding-left:20px;font-size:28px;" onfocus="MyCalendar.SetDate(this)" value="选择日期">
+                    	 <br/> <br/> 
+                    婚姻状态<br>
+                    	 <select name="marry" style="color:#CCC;font-size:28px;padding-left:254px;">
+                          <option ></option>
+                          <option value="yihun">已婚</option>
+                          <option value="weihun">未婚</option>
+                          <option value="dinghun">订婚</option>
+                          </select><br/> <br/> 
+                    <input type="checkbox" name="box" id="box-1" value="1"/>
+                    <label for="box">本人在此打钩即表示同意以下</label>
+                    
+                    	
+              			<textarea type="text" name="jieshao" rows="10" cols="39">
+                        
+                        	经提供以上信息，本人兹同意蒂芙尼（上海）商业有限公司、Tiffany & Co.及在 www.tiffany.com/privacypolicy 中所列出的其各自关联公司（合称“Tiffany”）可使用本人提供的上述姓名、电邮地址及其它个人信息联络我及开展直销、销售和研究活动。Tiffany 可将此信息与以下各方共享：(1) 其关联公司、服务提供商和联合营销合作伙伴，但应为上面列出之目的，(2) 政府部门，和 (3) 按法律法规要求。Tiffany 还可为此等目的将我的个人信息传输至美国及其它可能无法提供与本人初次提供此信息的国家具有同等水平的资料保护措施的国家或地区。本人可于任何时候（且无需支付费用）通过点击 Tiffany 营销电邮中的取消订阅链接或按下面的方式联系 Tiffany，通知 Tiffany 停止向我发送营销沟通邮件。在符合适用法律之规定的前提下，本人可对使用本人信息进行营销、销售和研究活动提出反对意见，且本人应能访问、纠正在此卡片上提供的个人信息及要求阻止或删除此等信息。如本人提出对于出于上述目的使用本人个人信息的反对，Tiffany 将停止为此等目的使用该信息。本人可通过联系 Tiffany 客户服务部门 CNCustomerService@Tiffany.com 行使此等权利。有关 Tiffany 信息实践的更多信息，请阅读我们的全球隐私通知：www.Tiffany.com/PrivacyPolicy。</textarea>
+                			  <br/><br/>
+                          <input type="submit" value="注册" style="width:335px;height:28px;background-color:#81D8CF;color:white;"/>
+           				 	<br/><br/>
+          
+    </form>
+
+
+	</div>
+    
+</div>
+<div id="foot">
+	<div id="dfn2"></div>
+    <div id="juti">
+    <ul>
+      <li> 
+    	<ul>
+       		<li>客户服务</li>
+            <hr/>
+        	<li><a href="">常见问题解答</a></li>
+            <li><a href="">珠宝保养</a></li>
+            <li><a href="">隐私政策</a></li>
+            <li><a href="">COOKIE政策</a></li>
+        
+        </ul>
+      </li>
+      <li>
+        <ul>
+        	<li>最新资讯</li>
+            <hr/>
+        	<li><a href="">TIFFANY EMAIL资讯</a></li>
+            <li><a href="">产品目录</a></li>
+            <li><a href="http://e.weibo.com/tiffanyandco">
+            		<img src="images/weibo.png"/><span style="color:#000">微博</span>
+            </a></li>
+            <li><a href="http://tvs.youku.com/tiffany">
+            		<img src="images/youku.png"/><span style="color:#000">优酷网</span>
+            </a></li>
+        
+        </ul>
+        </li>
+        <li>
+        <ul>
+       		<li>我们的公司</li>
+            <hr/>
+        	<li><a href="">企业社会责任</a></li>
+            <li><a href="">投资者</a></li>
+            <li><a href="">工作机会</a></li>
+        
+        </ul>
+        </li>
+        <li>
+        <ul>
+        	<li>关于TIFFANY网站</li>
+            <hr/>
+        	<li><a href="">手机网站</a></li>
+            <li><a href="">蒂凡尼订婚钻戒顾问(Android)</a></li>
+            <li><a href="">蒂凡尼订婚钻戒顾问(iPhone)</a></li>
+            <li><a href="">Tiffany& Co基金会 </a></li>
+        
+        </ul>
+       </li>
+       <li>
+        <ul>
+        	<li>+</li>
+            <hr/>
+        	<li><a href="">百度搜索</a></li>
+            <li><a href="">Goodle搜索</a></li>
+            <li><a href="">网站索引</a></li>
+            <li><a href="">© T&CO. 2016</a></li>
+        
+        </ul>
+    </li>
+    </ul>
+    
+    
+   
+</div>
+</div >
+<div id="mao" style="float:right;"><a href="#top"/><img src="images/fanhui.png" ></div>
+</body>
+</html>
